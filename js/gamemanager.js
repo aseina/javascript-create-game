@@ -22,22 +22,7 @@ let GameManager = {
         break;
     }
     let getInterface = document.querySelector(".interface");
-    getInterface.innerHTML =
-      '<img src="./img/avatar-player/' +
-      classType.toLowerCase() +
-      '.jpg" class="img-avatar"><div><h3>' +
-      classType +
-      "</h3><p class="health-player>Health: " +
-      player.health +
-      "</p><p>Mana: " +
-      player.mana +
-      "</p><p>Strength: " +
-      player.strength +
-      "</p><p>Agility: " +
-      player.agility +
-      "</p><p>Speed: " +
-      player.speed +
-      "</p></div>";
+    getInterface.innerHTML = '<img src="./img/avatar-player/' + classType.toLowerCase() + '.jpg" class="img-avatar"><div><h3>' + classType + '</h3><p class="health-player">Health: ' + player.health + '</p><p>Mana: ' + player.mana + '</p><p>Strength: ' + player.strength + '</p><p>Agility: ' + player.agility + '</p><p>Speed: ' + player.speed + '</p></div>';
   },
   setPreFight: function () {
     let getHeader = document.querySelector(".header");
@@ -65,22 +50,8 @@ let GameManager = {
         break;
     }
 
-    getHeader.innerHTML = "<p>Task: Choose your move!</p>";
-    getActions.innerHTML =
-      '<a href="#" class="btn-prefight" onclik="PlayerMoves.calcAttack()">Attack!</a>';
-    getEnemy.innerHTML =
-      '<img src="./img/avatar-enemy/' +
-      enemy.enemyType.toLowerCase() +
-      '.jpg" alt="' +
-      enemy.enemyType +
-      '"class="img-avatar"><div><h3>' +
-      enemy.enemyType +
-      '</h3><p class=:health-enemy">Health: ' +
-      enemy.health +
-      "</p><p>Mana: " +
-      enemy.agility +
-      "</p><p>Speed: " +
-      enemy.speed +
-      "</p></div>";
-  },
-};
+    getHeader.innerHTML = '<p>Task: Choose your move!</p>';
+    getActions.innerHTML = '<a href="#" class="btn-prefight" onclik="PlayerMoves.calcAttack()">Attack!</a>';
+    getEnemy.innerHTML = '<img src="./img/avatar-enemy/' + enemy.enemyType.toLowerCase() + '.jpg" alt="' + enemy.enemyType + '" class="img-avatar"><div><h3>' + enemy.enemyType + '</h3><p class="health-enemy">Health: ' + enemy.health + '</p><p>Mana: ' + enemy.agility + '</p><p>Speed: ' + enemy.speed + '</p></div>';
+  }
+}
